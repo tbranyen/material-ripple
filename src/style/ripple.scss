@@ -1,0 +1,45 @@
+$animation-color: hsl(180, 40%, 80%);
+$animation-speed: 0.65s;
+
+.material-ripple {
+	position: relative;
+	overflow: hidden;
+	width: 200px;
+}
+
+.ripple {
+	/* static positioned elements appear behind absolutely positioned siblings (.ink in this case)
+	hence we will make the links relatively positioned to bring them above .ink */
+	position: relative;
+	display: block;
+	cursor: pointer;
+	/* prevent text selection */
+	user-select: none;
+	padding: 10px 15px;
+}
+
+/*
+.ink styles - the elements which will create the ripple effect.
+The size and position of these elements will be set by the JS code.
+Initially these elements will be scaled down to 0% and later animated to large fading circles on user click.
+*/
+.ink {
+	display: block;
+	position: absolute;
+	background: $animation-color;
+	border-radius: 100%;
+	transform: scale(0);
+}
+
+/* animation effect */
+.ink.animate {
+	animation: ripple $animation-speed linear;
+}
+
+@keyframes ripple {
+	/* scale the element to 250% to safely cover the entire link and fade it out */
+	100% {
+		opacity: 0;
+		transform: scale(2.5);
+	}
+}
