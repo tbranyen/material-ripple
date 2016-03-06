@@ -1,6 +1,6 @@
 {
   "name": "material-ripple",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Material Design Ripple effect",
   "main": "src/index.js",
   "keywords": [
