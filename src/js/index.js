@@ -3,13 +3,13 @@ $(".material-ripple").click(function(event) {
 	var surface = $(this);
 
   // create .ink element if it doesn't exist
-	if (surface.find(".ink").length == 0) {
-    surface.prepend("<div class='ink'></div>");
+	if (surface.find(".material-ink").length == 0) {
+    surface.prepend("<div class='material-ink'></div>");
   }
 
-	var ink = surface.find(".ink");
+	var ink = surface.find(".material-ink");
 
-  // incase of quick double clicks stop the previous animation
+  // in case of quick double clicks stop the previous animation
 	ink.removeClass("animate");
 
 	// set size of .ink

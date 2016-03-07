@@ -33,6 +33,37 @@ You can change the ripple color with the `data-ripple-color` attribute:
   <span>Settings</span>
 </div>
 ````
+**NOTE:** Static positioned elements appear behind absolutely positioned siblings (`.material-ink` in this case)
+so you should set `position: relative;` to child elements inside `.material-ripple` to bring them above `.material-ink`.
+
+For example if you have an HTML structure like this:
+
+````html
+<div class="material-ripple">
+  <span>Dashboard</span>
+</div>
+````
+
+Make the `span` elements relatively positioned like this:
+
+````css
+.material-ripple > span {
+  position: relative;
+}
+````
+
+## Bonus
+
+Material Design Cards and Box Shadow by **Samuel Thornton**
+http://codepen.io/sdthornton/pen/wBZdXq
+
+You can choose from 5 different shadow level (from 1 to 5).
+
+````html
+<div class="material-card material-shadow-1">
+  ...
+</div>
+````
 
 ## License
 
