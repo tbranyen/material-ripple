@@ -13,7 +13,7 @@ $ npm install material-ripple
 
 ## How to use it
 
-You need to include the **CSS** and **JS** resources located in the `bin` folder. Don't forget to include **jQuery** as well.
+You need to include the **CSS** and **JS** resources located in the `dist` folder. Don't forget to include **jQuery** as well.
 
 ````html
 <link rel="stylesheet" href="ripple.min.css">
