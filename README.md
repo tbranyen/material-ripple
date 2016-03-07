@@ -1,7 +1,7 @@
 # Material Design Ripple effect
 Material Design Ripple effect with jQuery and CSS
 
-Check out the official [Material Design resorces](https://www.google.com/design/spec/animation/responsive-interaction.html#responsive-interaction-surface-reaction)made by Google
+Check out the official [Material Design resources](https://www.google.com/design/spec/animation/responsive-interaction.html#responsive-interaction-surface-reaction) made by Google
 
 ## Install
 
