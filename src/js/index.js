@@ -1,6 +1,6 @@
 var $ = require('jquery');
 var ripple = require('./ripple');
 
-$(".ripple").click(function(e) {
-	ripple(this, e);
+$(".material-ripple").click(function(event) {
+	ripple(this, event);
 });
