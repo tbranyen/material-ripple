@@ -5,7 +5,7 @@ Check out the official [Material Design resources](https://www.google.com/design
 
 ## Install
 
-#### NPM
+##### NPM
 
 ```bash
 $ npm install material-ripple
