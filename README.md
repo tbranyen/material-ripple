@@ -55,6 +55,7 @@ Make the `span` elements relatively positioned like this:
 ## Bonus
 
 Material Design Cards and Box Shadow by **Samuel Thornton**
+
 http://codepen.io/sdthornton/pen/wBZdXq
 
 You can choose from 5 different shadow level (from 1 to 5).
