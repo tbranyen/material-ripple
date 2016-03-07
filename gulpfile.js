@@ -1,22 +1,10 @@
 var del         = require('del'),
   gulp          = require('gulp'),
-  sass          = require('gulp-sass'),
-  nconf         = require('nconf'),
   rename        = require('gulp-rename'),
   uglify        = require('gulp-uglify'),
   postcss       = require('gulp-postcss'),
-  sourcemaps    = require('gulp-sourcemaps'),
   autoprefixer  = require('autoprefixer'),
-  cssnano       = require('cssnano'),
-  browserify    = require('browserify'),
-  source        = require('vinyl-source-stream'),
-  buffer        = require('vinyl-buffer');
-
-nconf.argv()
-  .env()
-  .file({file: 'config.json'});
-
-var debug = nconf.get('debug');
+  cssnano       = require('cssnano');
 
 // clean dist folder
 gulp.task('clean', function () {
@@ -25,27 +13,7 @@ gulp.task('clean', function () {
 
 // JS build
 gulp.task('build:JS', function () {
-  var b = browserify({
-    entries: './src/js/index.js',
-    debug: true,
-  });
-
-  if (debug) {
-    return b.bundle()
-      .pipe(source('bundle.js'))
-      .pipe(buffer())
-      .pipe(rename('ripple.js'))
-      .pipe(gulp.dest('./dist'))
-      .pipe(sourcemaps.init())
-        .pipe(uglify())
-        .pipe(rename('ripple.min.js'))
-      .pipe(sourcemaps.write('.'))
-      .pipe(gulp.dest('./dist'));
-  }
-
-  return b.bundle()
-    .pipe(source('bundle.js'))
-    .pipe(buffer())
+  return gulp.src('./src/js/index.js')
     .pipe(rename('ripple.js'))
     .pipe(gulp.dest('./dist'))
     .pipe(uglify())
@@ -60,20 +28,7 @@ gulp.task('build:CSS', function () {
     cssnano()
   ];
 
-  if (debug) {
-    return gulp.src('./src/style/ripple.scss')
-      .pipe(rename('style.css'))
-      .pipe(sass().on('error', sass.logError))
-      .pipe(sourcemaps.init())
-        .pipe(postcss(preprocessors))
-        .pipe(rename('ripple.min.css'))
-      .pipe(sourcemaps.write('.'))
-      .pipe(gulp.dest('./dist'));
-  }
-
-  return gulp.src('./src/style/ripple.scss')
-    .pipe(rename('style.css'))
-    .pipe(sass().on('error', sass.logError))
+  return gulp.src('./src/style/ripple.css')
     .pipe(postcss(preprocessors))
     .pipe(rename('ripple.min.css'))
     .pipe(gulp.dest('./dist'));

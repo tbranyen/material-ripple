@@ -1,20 +1,10 @@
-$animation-color: white;
-$animation-speed: 0.6s;
+/* Material Ripple effect */
 
 .material-ripple {
 	position: relative;
 	overflow: hidden;
 	cursor: pointer;
-	width: 200px;
 	user-select: none;
-}
-
-.material-ripple > * {
-	/* static positioned elements appear behind absolutely positioned siblings (.ink in this case)
-	hence we will make the links relatively positioned to bring them above .ink */
-	position: relative;
-	display: block;
-	padding: 15px 25px;
 }
 
 /*
@@ -24,7 +14,7 @@ Initially these elements will be scaled down to 0% and later animated to large f
 */
 .ink {
 	position: absolute;
-	background: $animation-color;
+	background: white;
 	border-radius: 50%;
 	transform: scale(0);
 	opacity: 0.4;
@@ -32,7 +22,7 @@ Initially these elements will be scaled down to 0% and later animated to large f
 
 /* animation effect */
 .ink.animate {
-	animation: ripple $animation-speed linear;
+	animation: ripple 0.6s linear;
 }
 
 @keyframes ripple {

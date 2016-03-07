@@ -40,17 +40,11 @@
   },
   "devDependencies": {
     "autoprefixer": "^6.3.3",
-    "browserify": "^13.0.0",
     "cssnano": "^3.5.2",
     "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-postcss": "^6.1.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.2.0",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^1.5.3",
-    "nconf": "^0.8.4",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0"
+    "gulp-uglify": "^1.5.3"
   }
 }

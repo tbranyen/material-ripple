@@ -1,19 +1,41 @@
-<link rel="stylesheet" href="../dist/ripple.min.css">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Material Ripple</title>
+    <link rel="stylesheet" href="../dist/ripple.min.css">
+    <style>
+      body {
+      	margin: 0;
+      }
 
-<div class="material-ripple" data-ripple-color="#c0392b">
-  <span>Dashboard</span>
-</div>
+      .material-ripple > span {
+        /* static positioned elements appear behind absolutely positioned siblings (.ink in this case)
+        hence we will make the links relatively positioned to bring them above .ink */
+        position: relative;
+        display: block;
+        padding: 15px 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="material-ripple" data-ripple-color="#c0392b">
+      <span>Dashboard</span>
+    </div>
 
-<div class="material-ripple" data-ripple-color="#2ecc71">
-  <span>My Account</span>
-</div>
+    <div class="material-ripple" data-ripple-color="#2ecc71">
+      <span>My Account</span>
+    </div>
 
-<div class="material-ripple" data-ripple-color="#3498db">
-  <span>Settings</span>
-</div>
+    <div class="material-ripple" data-ripple-color="#3498db">
+      <span>Settings</span>
+    </div>
 
-<div class="material-ripple" data-ripple-color="#bdc3c7">
-  <span>Logout</span>
-</div>
+    <div class="material-ripple" data-ripple-color="#bdc3c7">
+      <span>Logout</span>
+    </div>
 
-<script src="../dist/ripple.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../dist/ripple.min.js"></script>
+  </body>
+</html>
