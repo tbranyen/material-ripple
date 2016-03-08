@@ -4,7 +4,10 @@
     <meta charset="utf-8">
     <title>Material Ripple</title>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat' type='text/css'>
+    
+    <!-- Material Ripple CSS -->
     <link rel="stylesheet" href="../dist/ripple.min.css" type='text/css'>
+    
     <style>
       body {
       	margin: 0;
@@ -19,7 +22,12 @@
         display: block;
         padding: 15px 25px;
       }
+
+      .red-ripple > .material-ink {
+        background-color: red;
+      }
     </style>
+
   </head>
   <body>
     <div class="material-card material-shadow-1 material-hover">
@@ -28,6 +36,12 @@
         <span>Dashboard</span>
       </div>
 
+      <!-- you can change the ripple color with CSS -->
+      <div class="material-ripple red-ripple">
+        <span>Categories</span>
+      </div>
+
+      <!-- or you can use the "data-ripple-color" attribute -->
       <div class="material-ripple" data-ripple-color="#2ecc71">
         <span>My Account</span>
       </div>
@@ -41,7 +55,10 @@
       </div>
     </div>
 
+    <!-- jQuery -->
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    
+    <!-- Material Ripple JS -->
     <script src="../dist/ripple.min.js"></script>
   </body>
 </html>
