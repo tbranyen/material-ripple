@@ -7,6 +7,7 @@ Check out the official [Material Design resources](https://www.google.com/design
 
 ## Installation
 
+##### NPM
 `material-ripple` is available as an [npm package](https://www.npmjs.com/package/material-ripple)
 
 ```bash
