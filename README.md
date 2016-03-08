@@ -1,6 +1,8 @@
 # Material Design Ripple effect
 > Material Design Ripple effect with jQuery and CSS
 
+![what it looks like](http://i.giphy.com/Hpd2CH1wdEZfq.gif)
+
 Check out the official [Material Design resources](https://www.google.com/design/spec/animation/responsive-interaction.html#responsive-interaction-surface-reaction) made by Google
 
 ## Install
@@ -26,6 +28,8 @@ You need to include the **CSS** and **JS** resources located in the `dist` folde
 <script src="ripple.min.js"></script>
 ````
 
+### Styling
+
 You can change the ripple color with the `data-ripple-color` attribute:
 
 ````html
@@ -33,6 +37,15 @@ You can change the ripple color with the `data-ripple-color` attribute:
   <span>Settings</span>
 </div>
 ````
+
+Or you can use CSS:
+
+````css
+.red-ripple > .material-ink {
+  background-color: red;
+}
+````
+
 **NOTE:** Static positioned elements appear behind absolutely positioned siblings (`.material-ink` in this case)
 so you should set `position: relative;` to child elements inside `.material-ripple` to bring them above `.material-ink`.
 
