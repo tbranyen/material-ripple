@@ -5,9 +5,9 @@
 
 Check out the official [Material Design resources](https://www.google.com/design/spec/animation/responsive-interaction.html#responsive-interaction-surface-reaction) made by Google
 
-## Install
+## Installation
 
-##### NPM
+`material-ripple` is available as an [npm package](https://www.npmjs.com/package/material-ripple)
 
 ```bash
 $ npm install material-ripple
