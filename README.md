@@ -3,7 +3,7 @@
 
 ![what it looks like](http://i.giphy.com/Hpd2CH1wdEZfq.gif)
 
-Check out the official [Material Design resources](https://www.google.com/design/spec/animation/responsive-interaction.html#responsive-interaction-surface-reaction) made by Google
+Check out the [live example at CodePen](http://codepen.io/balintsoos/full/YqWLOJ/)
 
 ## Installation
 
