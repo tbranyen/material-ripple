@@ -47,11 +47,13 @@
 
     ink.classList.remove(animateClass);
 
-    var x = pageX - target.offsetLeft - ink.offsetWidth / 2;
-    var y = pageY - target.offsetTop - ink.offsetHeight / 2;
+    var clientRect = target.getBoundingClientRect();
+    var x = pageX - clientRect.left - ink.offsetWidth / 2;
+    var y = pageY - clientRect.top - ink.offsetHeight / 2;
 
     ink.style.setProperty('--' + className + '-ink-top', y + 'px');
     ink.style.setProperty('--' + className + '-ink-left', x + 'px');
+    ink.style.setProperty('height', clientRect.width + 'px');
 
     ink.classList.add(animateClass);
   }
