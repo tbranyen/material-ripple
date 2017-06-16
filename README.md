@@ -38,7 +38,24 @@ You will also need to include the CSS:
 <script src="material-ripple.min.js"></script>
 ```
 
-### CSS Variables
+## z-index issues
+
+In order to prevent overlap issues with siblings, there is a CSS rule defined:
+
+``` css
+/*
+ * This keeps the ripple underneath siblings, by setting all siblings to have
+ * a higher z-index than the `.material-ripple-ink` priority of `0`.
+ */
+.material-ripple-ink ~ :not(.material-ripple-ink) {
+  z-index: 1;
+  position: relative;
+}
+```
+
+Just keep it in mind when using this tool, and adjust your CSS accordingly.
+
+## CSS Variables
 
 You can change the ripple background color using a CSS variable: 
 

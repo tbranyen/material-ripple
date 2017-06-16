@@ -35,27 +35,22 @@
       }
     }
 
-    var ink = target.querySelector('.' + inkClassName);
+    var ink = Object.assign(document.createElement('div'), {
+      className: inkClassName
+    });
 
-    if (!ink) {
-      ink = Object.assign(document.createElement('div'), {
-        className: inkClassName
-      });
-
-      target.insertBefore(ink, target.firstChild);
-    }
-
-    ink.classList.remove(animateClass);
+    target.insertBefore(ink, target.firstChild);
 
     var clientRect = target.getBoundingClientRect();
     var x = pageX - clientRect.left - ink.offsetWidth / 2;
-    var y = pageY - clientRect.top - ink.offsetHeight / 2;
+    var y = pageY - clientRect.top - ink.offsetWidth / 2;
 
     ink.style.setProperty('--' + className + '-ink-top', y + 'px');
     ink.style.setProperty('--' + className + '-ink-left', x + 'px');
     ink.style.setProperty('height', clientRect.width + 'px');
 
     ink.classList.add(animateClass);
+    //setTimeout(() => ink.parentNode.removeChild(ink), 600);
   }
 
   if (typeof document !== 'undefined') {
