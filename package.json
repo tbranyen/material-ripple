@@ -1,6 +1,6 @@
 {
   "name": "@tbranyen/material-ripple",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Material Design Ripple effect",
   "homepage": "https://github.com/balintsoos/material-ripple",
   "main": "material-ripple.js",

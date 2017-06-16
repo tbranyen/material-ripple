@@ -50,7 +50,9 @@
     ink.style.setProperty('height', clientRect.width + 'px');
 
     ink.classList.add(animateClass);
-    //setTimeout(() => ink.parentNode.removeChild(ink), 600);
+    setTimeout(function () {
+      return ink.parentNode.removeChild(ink);
+    }, 600);
   }
 
   if (typeof document !== 'undefined') {
