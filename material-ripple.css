@@ -1,0 +1,32 @@
+.material-ripple {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.material-ripple-ink {
+  position: absolute;
+  background: var(--material-ripple-background, #3F51B5);
+  border-radius: 50%;
+  transform: scale(0);
+  opacity: 0.4;
+  width: 100%;
+  height: 100%;
+  top: var(--material-ripple-ink-top, 0);
+  left: var(--material-ripple-ink-left, 0);
+  bottom: 0;
+  right: 0;
+}
+
+.material-ripple-ink-animate {
+  animation: material-ripple 0.6s linear;
+}
+
+@keyframes material-ripple {
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
