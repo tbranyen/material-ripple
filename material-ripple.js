@@ -56,5 +56,7 @@
     ink.classList.add(animateClass);
   }
 
-  document.body.addEventListener('click', eventListener);
+  if (typeof document !== 'undefined') {
+    document.body.addEventListener('click', eventListener);
+  }
 });

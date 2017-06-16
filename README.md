@@ -1,83 +1,60 @@
-# Material Design Ripple effect
-> Material Design Ripple effect with jQuery and CSS
+# Material Ripple
 
-![what it looks like](http://i.giphy.com/Hpd2CH1wdEZfq.gif)
-
-Check out the [live example at CodePen](http://codepen.io/balintsoos/full/YqWLOJ/)
+Displays a ripple effect within an element container. Uses ES 6, CSS Variables,
+and is compiled down to ES5/UMD with Babel.
 
 ## Installation
 
-##### NPM
-`material-ripple` is available as an [npm package](https://www.npmjs.com/package/material-ripple)
+This has been forked from: https://github.com/balintsoos/material-ripple
 
-```bash
-$ npm install material-ripple
+``` sh
+npm install @tbranyen/material-ripple
 ```
 
-## How to use it
+## How to use
 
-You need to include the **CSS** and **JS** resources located in the `dist` folder. Don't forget to include **jQuery** as well.
+Once you've installed using NPM, you will have a folder:
 
-````html
-<link rel="stylesheet" href="ripple.min.css">
+```
+node_modules/@tbranyen/material-ripple
+```
+
+You can import using ES6 or AMD, CJS, or simply by dropping the
+`material-ripple.js` file into an HTML page.
+
+``` js
+import { eventListener, className } from '@tbranyen/material-ripple';
+```
+
+You will also need to include the CSS:
+
+``` html
+<link rel="stylesheet" href="node_modules/@tbranyen/material-ripple/ripple.css">
 
 <div class="material-ripple">
   <span>My Account</span>
 </div>
 
-<script src="jquery.min.js"></script>
-<script src="ripple.min.js"></script>
-````
+<script src="material-ripple.min.js"></script>
+```
 
-### Styling
+### CSS Variables
 
-You can change the ripple color with the `data-ripple-color` attribute:
+You can change the ripple background color using a CSS variable: 
 
-````html
-<div class="material-ripple" data-ripple-color="#3498db">
+``` html
+<div class="material-ripple" style="--material-ripple-background: #3498db">
   <span>Settings</span>
 </div>
-````
+```
 
 Or you can use CSS:
 
-````css
-.red-ripple > .material-ink {
-  background-color: red;
+``` css
+.red-ripple {
+  --material-ripple-background: red;
 }
-````
-
-**NOTE:** Static positioned elements appear behind absolutely positioned siblings (`.material-ink` in this case)
-so you should set `position: relative;` to child elements inside `.material-ripple` to bring them above `.material-ink`.
-
-For example if you have an HTML structure like this:
-
-````html
-<div class="material-ripple">
-  <span>Dashboard</span>
-</div>
-````
-
-Make the `span` elements relatively positioned like this:
-
-````css
-.material-ripple > span {
-  position: relative;
-}
-````
-
-## Bonus
-
-Material Design Cards and Box Shadow by **Samuel Thornton**
-[CodePen link](http://codepen.io/sdthornton/pen/wBZdXq)
-
-You can choose from 5 different shadow level (from 1 to 5).
-
-````html
-<div class="material-card material-shadow-1">
-  ...
-</div>
-````
+```
 
 ## License
 

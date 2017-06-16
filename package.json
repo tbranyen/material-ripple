@@ -1,6 +1,6 @@
 {
-  "name": "material-ripple",
-  "version": "0.2.5",
+  "name": "@tbranyen/material-ripple",
+  "version": "1.0.0",
   "description": "Material Design Ripple effect",
   "homepage": "https://github.com/balintsoos/material-ripple",
   "main": "material-ripple.js",
@@ -36,12 +36,14 @@
     "url": "https://github.com/balintsoos/material-ripple/issues"
   },
   "scripts": {
-    "prepublish": "npm run build",
-    "build": "babel lib/material-ripple.js -o material-ripple.js"
+    "prepublish": "npm run build && npm run min",
+    "build": "babel lib/material-ripple.js -o material-ripple.js",
+    "min": "uglifyjs material-ripple.js -o material-ripple.min.js -m"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
-    "babel-preset-es2015": "^6.24.1"
+    "babel-preset-es2015": "^6.24.1",
+    "uglify-js": "^3.0.17"
   }
 }
